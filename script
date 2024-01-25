@@ -69,6 +69,16 @@ local TreatTab = Window:CreateTab("Treats", nil) -- Title, Image
 local TreatSection = TreatTab:CreateSection("Treats")
 
 local Button = TreatTab:CreateButton({
+   Name = "Collect All Adoption Center Treats",
+   Callback = function()
+      for i = 1, 45 do
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.AdoptionCenter.Treat.CFrame
+      end
+   end,
+})
+
+local Button = TreatTab:CreateButton({
    Name = "Treat Adoption Center",
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
@@ -140,6 +150,36 @@ local Button = TeleportTab:CreateButton({
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
       rootPart.CFrame = workspace.streetPlayersTp.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Vent end",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.ventSpawn3.CFrame
+   end,
+})
+
+local MobdelTab = Window:CreateTab("Mob Delete", nil) -- Title, Image
+local MobdelSection = MobdelTab:CreateSection("Mob Delete")
+
+local Button = MobdelTab:CreateButton({
+   Name = "Delete Animal Control",
+   Callback = function()
+      for i = 1, 3 do
+         game.Workspace.OfficerPatrol:Destroy()
+         end
+         game.Workspace.OfficerPatrol4:Destroy()
+   end,
+})
+
+local Button = MobdelTab:CreateButton({
+   Name = "Delete Roborats",
+   Callback = function()
+      game.Workspace.Roborat1:Destroy()
+      game.Workspace.Roborat2:Destroy()
+      game.Workspace.Roborat3:Destroy()
    end,
 })
 
