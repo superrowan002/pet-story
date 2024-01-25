@@ -74,7 +74,10 @@ local Button = TreatTab:CreateButton({
       for i = 1, 45 do
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
       rootPart.CFrame = workspace.Treats.AdoptionCenter.Treat.CFrame
+      wait(0.1)
       end
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Walkpoints.wp1.CFrame
    end,
 })
 
@@ -118,8 +121,26 @@ local Button = TreatTab:CreateButton({
    end,
 })
 
+local TreateventSection = TreatTab:CreateSection("Event locations")
+
+local Button = TreatTab:CreateButton({
+   Name = "Treat Supermarket",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.Supermarket.Treat.CFrame
+   end,
+})
+
 local TeleportTab = Window:CreateTab("Teleports", nil) -- Title, Image
 local TeleportSection = TeleportTab:CreateSection("Teleports")
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Grannie Truck",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Truck.TransparentBox.Touchpart.CFrame
+   end,
+})
 
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Dumpyard",
