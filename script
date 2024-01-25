@@ -101,7 +101,7 @@ local Button = TreatTab:CreateButton({
 })
 
 local TeleportTab = Window:CreateTab("Teleports", nil) -- Title, Image
-local TeleportSection = MainTab:CreateSection("Teleports")
+local TeleportSection = TeleportTab:CreateSection("Teleports")
 
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Dumpyard",
