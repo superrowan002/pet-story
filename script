@@ -92,6 +92,25 @@ local Button = TreatTab:CreateButton({
    end,
 })
 
+local Button = TreatTab:CreateButton({
+   Name = "Treat City Begin",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.City1.Treat.CFrame
+   end,
+})
+
+local TeleportTab = Window:CreateTab("Teleports", nil) -- Title, Image
+local TeleportSection = MainTab:CreateSection("Teleports")
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Dumpyard",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.dumpYardTeleport.CFrame
+   end,
+})
+
 local LobbyTab = Window:CreateTab("Lobby", nil) -- Title, Image
 local LobbySection = LobbyTab:CreateSection("Buying")
 
