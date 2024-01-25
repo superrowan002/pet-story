@@ -91,3 +91,32 @@ local Button = TreatTab:CreateButton({
       rootPart.CFrame = workspace.Treats.Sewer.Treat.CFrame
    end,
 })
+
+local LobbyTab = Window:CreateTab("Lobby", nil) -- Title, Image
+local LobbySection = LobbyTab:CreateSection("Buying")
+
+local Input = LobbyTab:CreateInput({
+   Name = "Buy Pet",
+   PlaceholderText = "Pet name",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(BuyPet)
+        local args = {
+    [1] = (BuyPet)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyPet"):InvokeServer(unpack(args))
+   end,
+})
+
+local Input = LobbyTab:CreateInput({
+   Name = "Buy Hat",
+   PlaceholderText = "Hat name",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(BuyHat)
+        local args = {
+    [1] = (BuyHat)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyHat"):InvokeServer(unpack(args))
+   end,
+})
