@@ -131,6 +131,14 @@ local Button = TreatTab:CreateButton({
    end,
 })
 
+local Button = TreatTab:CreateButton({
+   Name = "Treat North Pole",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.Christmas.Treat.CFrame
+   end,
+})
+
 local TeleportTab = Window:CreateTab("Teleports", nil) -- Title, Image
 local TeleportSection = TeleportTab:CreateSection("Teleports")
 
@@ -139,6 +147,14 @@ local Button = TeleportTab:CreateButton({
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
       rootPart.CFrame = workspace.Truck.TransparentBox.Touchpart.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Pet Room",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.sleepingRoomTouchPart.CFrame
    end,
 })
 
@@ -182,6 +198,24 @@ local Button = TeleportTab:CreateButton({
    end,
 })
 
+local TeleporteventSection = TeleportTab:CreateSection("Event locations")
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport River end",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.riverCheckpoint.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Polo Platform",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.PoloPlatform.PlatformMain.CFrame
+   end,
+})
+
 local MobdelTab = Window:CreateTab("Mob Delete", nil) -- Title, Image
 local MobdelSection = MobdelTab:CreateSection("Mob Delete")
 
@@ -205,7 +239,7 @@ local Button = MobdelTab:CreateButton({
 })
 
 local LobbyTab = Window:CreateTab("Lobby", nil) -- Title, Image
-local LobbySection = LobbyTab:CreateSection("Buying")
+local LobbybuySection = LobbyTab:CreateSection("Buying")
 
 local Input = LobbyTab:CreateInput({
    Name = "Buy Pet",
@@ -230,5 +264,47 @@ local Input = LobbyTab:CreateInput({
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyHat"):InvokeServer(unpack(args))
+   end,
+})
+
+local LobbyteleportSection = LobbyTab:CreateSection("Teleporting")
+
+local Button = LobbyTab:CreateButton({
+   Name = "Truck 1",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Truck1.Gate.CFrame
+   end,
+})
+
+local Button = LobbyTab:CreateButton({
+   Name = "Truck 2",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Truck2.Gate.CFrame
+   end,
+})
+
+local Button = LobbyTab:CreateButton({
+   Name = "Daily Reward",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.DailyRewardAssets.Hitbox.CFrame
+   end,
+})
+
+local Button = LobbyTab:CreateButton({
+   Name = "Mystery Shop",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.MysteryShopDoor.Main.CFrame
+   end,
+})
+
+local Button = LobbyTab:CreateButton({
+   Name = "Pet Shop",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.ShopDoor.Main.CFrame
    end,
 })
