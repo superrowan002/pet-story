@@ -100,6 +100,14 @@ local Button = TreatTab:CreateButton({
    end,
 })
 
+local Button = TreatTab:CreateButton({
+   Name = "Treat City End / Treat Vent",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.City2.Treat.CFrame
+   end,
+})
+
 local TeleportTab = Window:CreateTab("Teleports", nil) -- Title, Image
 local TeleportSection = TeleportTab:CreateSection("Teleports")
 
@@ -108,6 +116,30 @@ local Button = TeleportTab:CreateButton({
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
       rootPart.CFrame = workspace.dumpYardTeleport.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Street dogs",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.wpCity3.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Chase end",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.wpCity6.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Shelter",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.streetPlayersTp.CFrame
    end,
 })
 
