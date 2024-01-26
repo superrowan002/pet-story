@@ -217,6 +217,14 @@ local Button = TeleportTab:CreateButton({
 })
 
 local Button = TeleportTab:CreateButton({
+   Name = "Teleport Rat Fight End",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.sewerCheckpoint3.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
    Name = "Teleport Dumpyard",
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
@@ -396,6 +404,13 @@ local Button = MobdelTab:CreateButton({
          game.Workspace.OfficerPatrol:Destroy()
          end
          game.Workspace.OfficerPatrol4:Destroy()
+   end,
+})
+
+local Button = MobdelTab:CreateButton({
+   Name = "Delete Croc Bounce Outline",
+   Callback = function()
+      game.Workspace.crocRing:Destroy()
    end,
 })
 
