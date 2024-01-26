@@ -72,22 +72,6 @@ local Toggle = MainTab:CreateToggle({
    Callback = function(AttackauraOn)
 while AttackauraOn == true do
    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
-   wait(0.2)
-end
-   end,
-})
-
-local Toggle = MainTab:CreateToggle({
-   Name = "Tp Rat",
-   CurrentValue = false,
-   Flag = "Tprat", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(TpratOn)
-while TpratOn == true do
-   local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-   rootPart.CFrame = workspace.Rats.Rat.Head.CFrame
-   wait(0.1)
-   local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-   rootPart.CFrame = workspace.dumpYardTeleport.CFrame
    wait(0.1)
 end
    end,
@@ -144,6 +128,30 @@ local Button = TreatTab:CreateButton({
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
       rootPart.CFrame = workspace.Treats.City2.Treat.CFrame
+   end,
+})
+
+local Button = TreatTab:CreateButton({
+   Name = "Treat Zoo 1",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.Zoo1.Treat.CFrame
+   end,
+})
+
+local Button = TreatTab:CreateButton({
+   Name = "Treat Zoo 2",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.Zoo2.Treat.CFrame
+   end,
+})
+
+local Button = TreatTab:CreateButton({
+   Name = "Treat Zoo 3",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Treats.Zoo3.Treat.CFrame
    end,
 })
 
@@ -224,6 +232,54 @@ local Button = TeleportTab:CreateButton({
    end,
 })
 
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Zoo Bus",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = ZooBus.BusDoor.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Pannie",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.wpPannie1.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Lever",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.ZooLever1.Lever1.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Monkey start",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.startMonkeyChallengePart.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Monkey end",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.finishMonkeyChallengePart.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Crocodile end",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.crocObbyWallEnd.CFrame
+   end,
+})
+
 local TeleporteventSection = TeleportTab:CreateSection("Event locations")
 
 local Button = TeleportTab:CreateButton({
@@ -261,6 +317,66 @@ local Button = MobdelTab:CreateButton({
       game.Workspace.Roborat1:Destroy()
       game.Workspace.Roborat2:Destroy()
       game.Workspace.Roborat3:Destroy()
+   end,
+})
+
+local Toggle = MainTab:CreateToggle({
+   Name = "Delete Banana Peels",
+   CurrentValue = false,
+   Flag = "Delbananapeels", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(DlbananaOn)
+while DlbananaOn == true do
+   game.Workspace.BananaPeel:Destroy()
+   wait(0.1)
+end
+   end,
+})
+
+local Button = MobdelTab:CreateButton({
+   Name = "Delete Crocodiles",
+   Callback = function()
+      game.Workspace.ZooCrocs:Destroy()
+   end,
+})
+
+local MobdelSection = MobdelTab:CreateSection("Mob TP")
+
+local Toggle = MainTab:CreateToggle({
+   Name = "Tp Rat",
+   CurrentValue = false,
+   Flag = "Tprat", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(TpratOn)
+while TpratOn == true do
+   local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+   rootPart.CFrame = workspace.Rats.Rat.Head.CFrame
+   wait(0.1)
+end
+   end,
+})
+
+local Toggle = MainTab:CreateToggle({
+   Name = "Tp Cockroach",
+   CurrentValue = false,
+   Flag = "Tpcockroach", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(TpcockroachOn)
+while TpcockroachOn == true do
+   local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+   rootPart.CFrame = workspace.Cockroaches.Cockroach.Head.CFrame
+   wait(0.1)
+end
+   end,
+})
+
+local Toggle = MainTab:CreateToggle({
+   Name = "Tp Hyena",
+   CurrentValue = false,
+   Flag = "Tphyena", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(TphyenaOn)
+while TphyenaOn == true do
+   local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+   rootPart.CFrame = workspace.HyenaEnemies1.HyenaEnemy.TorsoPart.CFrame
+   wait(0.1)
+end
    end,
 })
 
