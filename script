@@ -201,6 +201,22 @@ local Button = TeleportTab:CreateButton({
 })
 
 local Button = TeleportTab:CreateButton({
+   Name = "Teleport Sleep",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.SleepPositions.Manekin.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
+   Name = "Teleport Sewer Puzzle End",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.sewerDoorTeleport7.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
    Name = "Teleport Dumpyard",
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
@@ -449,8 +465,8 @@ local Toggle = MobdelTab:CreateToggle({
    Callback = function(TpratOn)
 while TpratOn == true do
    local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-   rootPart.CFrame = workspace.Rats.Rat.Head.CFrame
-   wait(0.1)
+   rootPart.CFrame = workspace.Rats.SewerRat.HeadParts.Head.CFrame
+   wait(0.2)
 end
    end,
 })
