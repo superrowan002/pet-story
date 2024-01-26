@@ -77,6 +77,15 @@ end
    end,
 })
 
+local MaineventSection = MainTab:CreateSection("Event Options")
+
+local Button = MainTab:CreateButton({
+   Name = "Remove River Water",
+   Callback = function()
+      game.Workspace.Water:Destroy()
+   end,
+})
+
 local TreatTab = Window:CreateTab("Treats", nil) -- Title, Image
 local TreatSection = TreatTab:CreateSection("Treats")
 
@@ -379,6 +388,14 @@ local Button = TeleportTab:CreateButton({
 local TeleporteventSection = TeleportTab:CreateSection("Event locations")
 
 local Button = TeleportTab:CreateButton({
+   Name = "Teleport Sleigh",
+   Callback = function()
+      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+      rootPart.CFrame = workspace.Sleigh.TransparentBox.TouchWall.CFrame
+   end,
+})
+
+local Button = TeleportTab:CreateButton({
    Name = "Teleport River end",
    Callback = function()
       local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
@@ -456,18 +473,6 @@ local Button = MobdelTab:CreateButton({
       game.Workspace.SquidyBoss.Tentacle2:Destroy()
       game.Workspace.SquidyBoss.Tentacle3:Destroy()
       game.Workspace.SquidyBoss.Tentacle4:Destroy()
-   end,
-})
-
-local Toggle = MobdelTab:CreateToggle({
-   Name = "Delete Ink",
-   CurrentValue = false,
-   Flag = "Delink", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(DlinkOn)
-while DlinkOn == true do
-   game.Workspace.InkProjectile:Destroy()
-   wait(0.1)
-end
    end,
 })
 
