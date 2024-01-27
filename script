@@ -518,11 +518,17 @@ local Toggle = MobdelTab:CreateToggle({
    CurrentValue = false,
    Flag = "Tpcockroach", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TpcockroachOn)
-while TpcockroachOn == true do
-   local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-   rootPart.CFrame = workspace.Cockroaches.Cockroach.Hitbox.CFrame
-   wait(0.1)
-end
+      while TpcockroachOn == true do
+         if game.Workspace.Cockroaches.Cockroach.Enemy.Health == 0 then
+             local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+             rootPart.CFrame = workspace.sleepingRoomTouchPart.CFrame
+         else
+             local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+             rootPart.CFrame = workspace.Cockroaches.Cockroach.Hitbox.CFrame
+         end
+         wait(0.1)
+     end
+     
    end,
 })
 
