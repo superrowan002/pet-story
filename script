@@ -520,7 +520,7 @@ local Toggle = MobdelTab:CreateToggle({
    Callback = function(TpcockroachOn)
 while TpcockroachOn == true do
    local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-   rootPart.CFrame = workspace.Cockroaches.Cockroach.Antenna1.CFrame
+   rootPart.CFrame = workspace.Cockroaches.Cockroach.Hitbox.CFrame
    wait(0.1)
 end
    end,
