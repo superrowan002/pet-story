@@ -90,103 +90,125 @@ local TreatTab = Window:CreateTab("Treats", nil) -- Title, Image
 local TreatSection = TreatTab:CreateSection("Treats")
 
 local Button = TreatTab:CreateButton({
-   Name = "Collect All Adoption Center Treats",
+   Name = "Treats Adoption Center",
    Callback = function()
-      for i = 1, 45 do
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.AdoptionCenter.Treat.CFrame
-      wait(0.1)
-      end
+      for i = 1, #workspace.Treats.AdoptionCenter:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.AdoptionCenter.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat Adoption Center",
+   Name = "Treats Grannie",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.AdoptionCenter.Treat.CFrame
+      for i = 1, #workspace.Treats.GrannieHouse:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.GrannieHouse.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat Grannie",
+   Name = "Treats Sewer",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.GrannieHouse.Treat.CFrame
+      for i = 1, #workspace.Treats.Sewer:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.Sewer.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat Sewer",
+   Name = "Treats City Begin",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.Sewer.Treat.CFrame
+      for i = 1, #workspace.Treats.City1:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.City1.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat City Begin",
+   Name = "Treats City End / Treat Vent",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.City1.Treat.CFrame
+      for i = 1, #workspace.Treats.City2:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.City2.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat City End / Treat Vent",
+   Name = "Treats Zoo 1",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.City2.Treat.CFrame
+      for i = 1, #workspace.Treats.Zoo1:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.Zoo1.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat Zoo 1",
+   Name = "Treats Zoo 2",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.Zoo1.Treat.CFrame
+      for i = 1, #workspace.Treats.Zoo2:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.Zoo2.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat Zoo 2",
+   Name = "Treats Zoo 3",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.Zoo2.Treat.CFrame
+      for i = 1, #workspace.Treats.Zoo3:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.Zoo3.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat Zoo 3",
+   Name = "Treats Aquarium",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.Zoo3.Treat.CFrame
-   end,
-})
-
-local Button = TreatTab:CreateButton({
-   Name = "Treat Aquarium",
-   Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.Aquarium.Treat.CFrame
+      for i = 1, #workspace.Treats.Aquarium:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.Aquarium.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local TreateventSection = TreatTab:CreateSection("Event locations")
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat Supermarket",
+   Name = "Treats Supermarket",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.Supermarket.Treat.CFrame
+      for i = 1, #workspace.Treats.Supermarket:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.Supermarket.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
 local Button = TreatTab:CreateButton({
-   Name = "Treat North Pole",
+   Name = "Treats North Pole",
    Callback = function()
-      local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-      rootPart.CFrame = workspace.Treats.Christmas.Treat.CFrame
+      for i = 1, #workspace.Treats.Christmas:GetChildren() do
+         local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
+         rootPart.CFrame = workspace.Treats.Christmas.Treat.CFrame
+         wait(0.1)
+     end
    end,
 })
 
