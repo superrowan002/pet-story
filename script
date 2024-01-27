@@ -501,18 +501,6 @@ local Button = MobdelTab:CreateButton({
 local MobdelSection = MobdelTab:CreateSection("Mob TP")
 
 local Toggle = MobdelTab:CreateToggle({
-   Name = "Tp Canela",
-   CurrentValue = false,
-   Flag = "TpCanela", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(TpcanelaOn)
-while TpcanelaOn == true do
-   game.Workspace.superrowan002_alt.Position = game.Workspace.cockroach.Position + Vector3.new(0, 1, 0)
-   wait(0.1)
-end
-   end,
-})
-
-local Toggle = MobdelTab:CreateToggle({
    Name = "Tp Rat",
    CurrentValue = false,
    Flag = "Tprat", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -532,8 +520,8 @@ local Toggle = MobdelTab:CreateToggle({
    Callback = function(TpcockroachOn)
 while TpcockroachOn == true do
    local rootPart = game.Workspace.superrowan002_alt.HumanoidRootPart
-   rootPart.CFrame = workspace.Cockroaches.Cockroach.Head.CFrame
-   wait(0.3)
+   rootPart.CFrame = workspace.Cockroaches.Cockroach.Antenna1.CFrame
+   wait(0.1)
 end
    end,
 })
