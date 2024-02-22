@@ -116,22 +116,3 @@ local Button = MainTab:CreateButton({
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("goldKeyEvent"):FireServer()
    end,
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   local args = {
-    [1] = insert
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("equipTitleEvent"):FireServer(unpack(args))
