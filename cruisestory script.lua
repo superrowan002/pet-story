@@ -1,118 +1,70 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cruise Story", "DarkTheme")
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("Main")
 
-local Window = Rayfield:CreateWindow({
-   Name = "Cruise Story Script",
-   LoadingTitle = "Cruise Story Hub",
-   LoadingSubtitle = "Lol",
-   ConfigurationSaving = {
-      Enabled = false,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Cruisestoryhub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
-})
+MainSection:NewTextBox("Give Cruise Bucks", "Give yourself Cruise Bucks", function(GiveBucks)
+    local args = {
+        [1] = GiveBucks
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("giveCashEvent"):FireServer(unpack(args))
+end)
 
+MainSection:NewTextBox("Give Tickets", "Give yourself Arcade Tickets", function(GiveTickets)
+    local args = {
+        [1] = GiveTickets
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("giveTicketsEvent"):FireServer(unpack(args))
+end)
 
-local MainTab = Window:CreateTab("Main", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Main")
+MainSection:NewTextBox("Give Item", "Give yourself any item if you know its name", function(GiveItem)
+    local args = {
+        [1] = GiveItem
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("giveItemEvent"):FireServer(unpack(args))
+end)
 
-local Button = MainTab:CreateButton({
-   Name = "Remote Spy",
-   Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
-   end,
-})
+MainSection:NewButton("Auto Heal", "Not able to be toggled off", function()
+    while wait() do  
+        local args = {
+            [1] = 100
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("healPlayerEvent"):FireServer(unpack(args))
+                    end
+end)
 
-local Input = MainTab:CreateInput({
-   Name = "Give Cash",
-   PlaceholderText = "Insert Amount",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(CashGive)
-local args = {
-    [1] = CashGive
-}
+MainSection:NewButton("Be the Pirate", "Activates the Be the Pirate gamepass", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("beThePirateEvent"):FireServer()
+end)
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("giveCashEvent"):FireServer(unpack(args))
-   end,
-})
+MainSection:NewButton("Tame Dog", "Tames the Dog", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("dogTreatEvent"):FireServer()
+end)
 
-local Input = MainTab:CreateInput({
-   Name = "Give Tickets",
-   PlaceholderText = "Insert Amount",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(TicketGive)
-local args = {
-    [1] = TicketGive
-}
+MainSection:NewButton("Revive", "Respawns the player", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("reviveEvent"):FireServer()
+end)
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("giveTicketsEvent"):FireServer(unpack(args))
-   end,
-})
+MainSection:NewButton("Unlock Cage", "Unlocks the cage the players are trapped in", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("goldKeyEvent"):FireServer()
+end)
 
-local Input = MainTab:CreateInput({
-   Name = "Give Item",
-   PlaceholderText = "Item Name",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(ItemName)
-local args = {
-    [1] = ItemName
-}
+MainSection:NewTextBox("Equip Title", "Equip any title in the game | Special: HALLOWEEN, SANTA", function(EquipTitle)
+    local args = {
+        [1] = EquipTitle
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("equipTitleEvent"):FireServer(unpack(args))
+end)
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("giveItemEvent"):FireServer(unpack(args))
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Auto Heal",
-   Callback = function()
-while wait() do  
-local args = {
-    [1] = 100
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("healPlayerEvent"):FireServer(unpack(args))
-            end
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Be the Pirate",
-   Callback = function()
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("beThePirateEvent"):FireServer()
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Tame Dog",
-   Callback = function()
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("dogTreatEvent"):FireServer()
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Revive",
-   Callback = function()
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("reviveEvent"):FireServer()
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Unlock Cage",
-   Callback = function()
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("goldKeyEvent"):FireServer()
-   end,
-})
+MainSection:NewTextBox("Award Badge", "Award yourself any badge in the game (enter badge ID)", function(AwardBadge)
+    local args = {
+        [1] = AwardBadge
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("awardBadgeEvent"):FireServer(unpack(args))
+end)
