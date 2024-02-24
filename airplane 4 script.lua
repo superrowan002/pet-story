@@ -1,110 +1,55 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Airplane 4 Story", "DarkTheme")
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("Main")
 
-local Window = Rayfield:CreateWindow({
-   Name = "Airplane 4 Script",
-   LoadingTitle = "Airplane 4 Hub",
-   LoadingSubtitle = "Lol",
-   ConfigurationSaving = {
-      Enabled = false,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Airplane4hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
-})
+MainSection:NewButton("Be the Monster", "Activates the Be the Monster gamepass", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("beTheMonsterEvent"):FireServer()
+end)
 
+MainSection:NewTextBox("Equip Title", "Equip any title in the game", function(EquipTitle)
+    local args = {
+        [1] = EquipTitle
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("equipTitleEvent"):FireServer(unpack(args))
+end)
 
-local MainTab = Window:CreateTab("Main", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Main")
+MainSection:NewButton("Revive", "Respawns the player", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ReviveEvent"):FireServer()
+end)
 
-local Button = MainTab:CreateButton({
-   Name = "Be the Monster",
-   Callback = function()
-   game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("beTheMonsterEvent"):FireServer()
-   end,
-})
+MainSection:NewTextBox("Select Baggage", "Choose the baggage item to be selected", function(SelectBaggage)
+    local args = {
+        [1] = SelectBaggage
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("selectedBaggageItemEvent"):FireServer(unpack(args))
+end)
 
-local Input = MainTab:CreateInput({
-   Name = "Title Selector",
-   PlaceholderText = "Insert Title (Caps)",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(SelectedTitle)
-local args = {
-    [1] = SelectedTitle
-}
+MainSection:NewButton("Auto Heal", "Not able to be toggled off", function()
+    while wait() do  
+        local args = {
+            [1] = 100
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("healPlayerEvent"):FireServer(unpack(args))
+                    end
+end)
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("equipTitleEvent"):FireServer(unpack(args))
+MainSection:NewTextBox("Give Item", "Give yourself any item if you know its name", function(GiveItem)
+    local args = {
+        [1] = GiveItem
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("grabItemEvent"):FireServer(unpack(args))
+end)
 
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Revive / Reset inv",
-   Callback = function()
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ReviveEvent"):FireServer()
-   end,
-})
-
-local Input = MainTab:CreateInput({
-   Name = "Baggage Selector",
-   PlaceholderText = "Insert Baggage",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(SelectedBaggage)
-local args = {
-    [1] = SelectedBaggage
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("selectedBaggageItemEvent"):FireServer(unpack(args))
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Auto Heal",
-   Callback = function()
-while wait() do
-local args = {
-    [1] = 100
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("healPlayerEvent"):FireServer(unpack(args))
-            end
-   end,
-})
-
-local Input = MainTab:CreateInput({
-   Name = "Item Grabber",
-   PlaceholderText = "Insert Item",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(SelectedItem)
-local args = {
-    [1] = SelectedItem
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GrabItemEvent"):FireServer(unpack(args))
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Ultimate Sword (unequip = gone)",
-   Callback = function()
-      for i = 1, 20 do
-local args = {
-   [1] = "Ronald Sword"
-}
-      game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GrabItemEvent"):FireServer(unpack(args))
-end
-   end,
-})
+MainSection:NewButton("Ultimate Sword", "Equip 10 swords at once", function()
+    for i = 1, 10 do
+        local args = {
+           [1] = "Ronald Sword"
+        }
+              game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GrabItemEvent"):FireServer(unpack(args))
+        end
+end)
