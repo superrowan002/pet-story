@@ -4,6 +4,8 @@ local MainTab = Window:NewTab("Main")
 local MainSection = MainTab:NewSection("Main")
 local FunTab = Window:NewTab("Fun")
 local FunSection = FunTab:NewSection("Fun")
+local TeleportTab = Window:NewTab("Teleport")
+local TeleportSection = TeleportTab:NewSection("Teleport")
 
 MainSection:NewTextBox("Give Item", "Give yourself Items", function(GiveItem)
     local args = {
@@ -79,8 +81,9 @@ MainSection:NewButton("Insta Damage Enemies", "Can't be toggled off (may cause l
     end    
 end)
 
-MainSection:NewButton("Remove Mo Chase Hitbox", "Remove Mo's Hitbox during the Playground Chase", function()
-    game:GetService("Workspace").MoChase.MoChaseHurtbox:Destroy()
+MainSection:NewButton("Remove Mo in Chase / Hallway", "Remove Mo from the game in the Chase and in the Hallway", function()
+    game.Workspace.MoChase:Destroy()
+    game.Workspace.MoHall:Destroy()
 end)
 
 MainSection:NewColorPicker("Get Flask", "Get a Flask with a custom color", Color3.fromRGB(0,0,0), function(GetFlask)
@@ -93,7 +96,7 @@ end)
 
 
 
-FunSection:NewButton("Tame Hamster", "Make Puffy the Hamster stay with you", function()
+FunSection:NewButton("Tame Hamster", "Make Puffy the Hamster stay with you (need cheese)", function()
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hamster"):FireServer()
 end)
 
@@ -111,4 +114,61 @@ FunSection:NewButton("Drop Football", "Drop the Football", function()
     }
     
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GetBall"):FireServer(unpack(args))
+end)
+
+
+
+TeleportSection:NewButton("Teleport Outside", "Teleport Outside", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.GateSense.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Spawn", "Teleport to the Spawn", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.SpawnLocation.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Cafeteria", "Teleport to the Cafeteria", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.CafeteriaSmall.CafeteriaTables.CafeteriaTable.Chair.Seat.Part.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Math", "Teleport to the Math Classroom", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.MathDesks.Desk.Chair.Seat.Part.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Reading", "Teleport to the Reading Classroom", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.ReadingDesks.Desk.Chair.Seat.Part.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Chemistry", "Teleport to the Chemistry Classroom", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.ChemistryDesks.Desk.Chair.Seat.Part.CFrame
+end)
+
+TeleportSection:NewButton("Teleport History", "Teleport to the History Classroom", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.HistoryDesks.Desk.Chair.Seat.Part.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Computers", "Teleport to the Computers Classroom", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.ComputersDesks.Desk.Chair.Seat.Part.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Detention", "Teleport to the Detention Classroom", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.DetentionDesks.Desk.Chair.Seat.Part.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Playground", "Teleport to the Playground", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.Playground.Slide1.Main.CFrame
+end)
+
+TeleportSection:NewButton("Teleport Chase End", "Teleport to the Chase End", function()
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = game.Workspace.Junctions.TubeSlide.SlideMain2.TouchSense.CFrame
 end)
