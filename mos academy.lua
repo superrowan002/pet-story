@@ -37,6 +37,22 @@ MainSection:NewButton("Give Money", "Quickly give money", function()
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CCo"):FireServer()
 end)
 
+MainSection:NewButton("Give Best Food", "Quickly give chicken", function()
+    local args = {
+        [1] = "Chicken"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))   
+end)
+
+MainSection:NewButton("Give Coffee", "Quickly give coffee", function()
+    local args = {
+        [1] = "Coffee"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))   
+end)
+
 MainSection:NewButton("Buy Gym", "Buy Gym Access from anywhere", function()
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("PayBully"):FireServer()
 end)
@@ -69,7 +85,7 @@ end)
 
 MainSection:NewColorPicker("Get Flask", "Get a Flask with a custom color", Color3.fromRGB(0,0,0), function(GetFlask)
     local args = {
-        [1] = Color3.new(GetFlask)
+        [1] = GetFlask
     }
     
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Flask"):FireServer(unpack(args))
