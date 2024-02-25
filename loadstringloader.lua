@@ -9,6 +9,10 @@ if game.PlaceId == 7071444234 then
       else
         if game.PlaceId == 8929050629 then
           loadstring(game:HttpGet("https://raw.githubusercontent.com/superrowan002/pet-story/master/mos%20academy.lua"))()
+            else
+                if game.PlaceId == 155615604 then
+                    loadstring(game:HttpGet("https://pastebin.com/raw/GzeWWPWN"))()
+                end
         end
       end
     end
