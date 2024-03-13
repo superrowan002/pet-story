@@ -97,6 +97,12 @@ end)
 
 
 FunSection:NewButton("Tame Hamster", "Make Puffy the Hamster stay with you (need cheese)", function()
+            local args = {
+        [1] = "Cheese"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+    wait(0.1)
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hamster"):FireServer()
 end)
 
