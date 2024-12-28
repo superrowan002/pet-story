@@ -457,6 +457,7 @@ while DlcrocAtkOn == true do
 	bounce:Destroy()
  	wait(0.1)
     end
+	end
    end,
 })
 
