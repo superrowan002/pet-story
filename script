@@ -446,10 +446,17 @@ local Button = MobdelTab:CreateButton({
    end,
 })
 
-local Button = MobdelTab:CreateButton({
+local Toggle = MobdelTab:CreateToggle({
    Name = "Delete Croc Bounce Outline",
-   Callback = function()
-      game.Workspace.crocRing:Destroy()
+   CurrentValue = false,
+   Flag = "Delcrocbounce", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(DlcrocAtkOn)
+while DlcrocAtkOn == true do
+   local bounce = game.Workspace:FindFirstChild("crocRing")
+   if bounce then
+	bounce:Destroy()
+ 	wait(0.1)
+    end
    end,
 })
 
@@ -467,10 +474,11 @@ local Toggle = MobdelTab:CreateToggle({
    CurrentValue = false,
    Flag = "Delbananapeels", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(DlbananaOn)
-while DlbananaOn == true do
-   game.Workspace.BananaPeel:Destroy()
-   wait(0.1)
-end
+   local banana = game.Workspace:FindFirstChild("BananaPeel")
+   if banana then
+	banana:Destroy()
+ 	wait(0.1)
+    end
    end,
 })
 
@@ -501,14 +509,19 @@ local Button = MobdelTab:CreateButton({
 local MobdelSection = MobdelTab:CreateSection("Mob TP")
 
 local Toggle = MobdelTab:CreateToggle({
-   Name = "Tp Rat",
+   Name = "Rat Killer Dumpyard",
    CurrentValue = false,
-   Flag = "Tprat", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(TpratOn)
-while TpratOn == true do
-   local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
-   rootPart.CFrame = workspace.Rats.SewerRat.HeadParts.Head.CFrame
-   wait(0.2)
+   Flag = "Ratkilldump", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(RatKillDump)
+while RatKillDump == true do
+  local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
+  local targetRat = game.Workspace.Rats:GetChildren()[math.random(1,#workspace.Rats:GetChildren())]
+  rootPart.CFrame = workspace.dumpYardTeleport.CFrame
+  wait(0.1)
+  rootPart.CFrame = targetRat.Hitbox.CFrame
+  wait(0.1)
+  game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+wait(0.1)
 end
    end,
 })
@@ -568,9 +581,14 @@ local Toggle = MobdelTab:CreateToggle({
    Flag = "Tphyena", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TphyenaOn)
 while TphyenaOn == true do
-   local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
-   rootPart.CFrame = workspace.HyenaEnemies1.HyenaEnemy.TorsoPart.CFrame
-   wait(0.1)
+  local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
+  local targetHyena = game.Workspace.HyenaEnemies1:GetChildren()[math.random(1,#workspace.HyenaEnemies1:GetChildren())]
+  rootPart.CFrame = workspace.teleportPlayersCrocEnd.CFrame
+  wait(0.1)
+  rootPart.CFrame = targetHyena.HumanoidRootPart.CFrame
+  wait(0.1)
+  game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+wait(0.1)
 end
    end,
 })
