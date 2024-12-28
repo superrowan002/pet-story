@@ -52,7 +52,7 @@ local Input = MainTab:CreateInput({
    PlaceholderText = "Insert Value",
    RemoveTextAfterFocusLost = false,
    Callback = function(WalkSpeedInput)
-game.Workspace.moikfjwoIANOIW.Humanoid.WalkSpeed = WalkSpeedInput
+game.Workspace.sadawefgvesgvwse.Humanoid.WalkSpeed = WalkSpeedInput
    end,
 })
 
@@ -61,7 +61,7 @@ local Input = MainTab:CreateInput({
    PlaceholderText = "Insert Value",
    RemoveTextAfterFocusLost = false,
    Callback = function(JumpPowerInput)
-game.Workspace.moikfjwoIANOIW.Humanoid.JumpPower = JumpPowerInput
+game.Workspace.sadawefgvesgvwse.Humanoid.JumpPower = JumpPowerInput
    end,
 })
 
@@ -93,7 +93,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Adoption Center",
    Callback = function()
       for i = 1, #workspace.Treats.AdoptionCenter:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.AdoptionCenter.Treat.CFrame
          wait(0.1)
      end
@@ -104,7 +104,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Grannie",
    Callback = function()
       for i = 1, #workspace.Treats.GrannieHouse:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.GrannieHouse.Treat.CFrame
          wait(0.1)
      end
@@ -115,7 +115,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Sewer",
    Callback = function()
       for i = 1, #workspace.Treats.Sewer:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.Sewer.Treat.CFrame
          wait(0.1)
      end
@@ -126,7 +126,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats City Begin",
    Callback = function()
       for i = 1, #workspace.Treats.City1:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.City1.Treat.CFrame
          wait(0.1)
      end
@@ -137,7 +137,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats City End / Treat Vent",
    Callback = function()
       for i = 1, #workspace.Treats.City2:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.City2.Treat.CFrame
          wait(0.1)
      end
@@ -148,7 +148,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Zoo 1",
    Callback = function()
       for i = 1, #workspace.Treats.Zoo1:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.Zoo1.Treat.CFrame
          wait(0.1)
      end
@@ -159,7 +159,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Zoo 2",
    Callback = function()
       for i = 1, #workspace.Treats.Zoo2:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.Zoo2.Treat.CFrame
          wait(0.1)
      end
@@ -170,7 +170,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Zoo 3",
    Callback = function()
       for i = 1, #workspace.Treats.Zoo3:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.Zoo3.Treat.CFrame
          wait(0.1)
      end
@@ -181,7 +181,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Aquarium",
    Callback = function()
       for i = 1, #workspace.Treats.Aquarium:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.Aquarium.Treat.CFrame
          wait(0.1)
      end
@@ -194,7 +194,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats Supermarket",
    Callback = function()
       for i = 1, #workspace.Treats.Supermarket:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.Supermarket.Treat.CFrame
          wait(0.1)
      end
@@ -205,7 +205,7 @@ local Button = TreatTab:CreateButton({
    Name = "Treats North Pole",
    Callback = function()
       for i = 1, #workspace.Treats.Christmas:GetChildren() do
-         local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
          rootPart.CFrame = workspace.Treats.Christmas.Treat.CFrame
          wait(0.1)
      end
@@ -218,7 +218,7 @@ local TeleportSection = TeleportTab:CreateSection("Teleports")
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Grannie Truck",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.Truck.TransparentBox.TouchPart.CFrame
    end,
 })
@@ -226,7 +226,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Pet Room",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.sleepingRoomTouchPart.CFrame
    end,
 })
@@ -234,7 +234,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Sleep",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.SleepPositions.Manekin.CFrame
    end,
 })
@@ -242,7 +242,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Sewer Puzzle End",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.sewerDoorTeleport7.CFrame
    end,
 })
@@ -250,7 +250,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Rat Fight End",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.sewerCheckpoint3.CFrame
    end,
 })
@@ -258,7 +258,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Dumpyard",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.dumpYardTeleport.CFrame
    end,
 })
@@ -266,7 +266,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Street dogs",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.wpCity3.CFrame
    end,
 })
@@ -274,7 +274,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Chase end",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.wpCity6.CFrame
    end,
 })
@@ -282,7 +282,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Shelter",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.streetPlayersTp.CFrame
    end,
 })
@@ -290,7 +290,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Vent end",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.ventSpawn3.CFrame
    end,
 })
@@ -298,7 +298,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Zoo Bus",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = ZooBus.BusDoor.CFrame
    end,
 })
@@ -306,7 +306,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Pannie",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.wpPannie1.CFrame
    end,
 })
@@ -314,7 +314,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Pannie Lever",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.ZooLever1.Lever1.CFrame
    end,
 })
@@ -322,7 +322,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Monkey start",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.startMonkeyChallengePart.CFrame
    end,
 })
@@ -330,7 +330,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Monkey end",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.finishMonkeyChallengePart.CFrame
    end,
 })
@@ -338,7 +338,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Crocodile end",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.crocObbyWallEnd.CFrame
    end,
 })
@@ -346,7 +346,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Hyena end",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.wpZoo14.CFrame
    end,
 })
@@ -354,7 +354,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Jellyfish start",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.jellyfishCheckpoint1.CFrame
    end,
 })
@@ -362,7 +362,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Jellyfish end",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.jellyfishCheckpoint2.CFrame
    end,
 })
@@ -370,7 +370,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Aquarium Lever 1",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.SharkLever.Lever1.CFrame
    end,
 })
@@ -378,7 +378,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Aquarium Lever 2",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.ControlTentacleLever.Lever1.CFrame
    end,
 })
@@ -386,7 +386,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Shark Room",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.RingAquarium5.Collider.CFrame
    end,
 })
@@ -394,7 +394,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Aquarium Lever 3",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.RedHandle.CFrame
    end,
 })
@@ -402,7 +402,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Sr. Squidy",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.RingAquarium9.Collider.CFrame
    end,
 })
@@ -412,7 +412,7 @@ local TeleporteventSection = TeleportTab:CreateSection("Event locations")
 local Button = TeleportTab:CreateButton({
    Name = "Teleport Sleigh",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.Sleigh.TransparentBox.TouchWall.CFrame
    end,
 })
@@ -420,7 +420,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Teleport River end",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.riverCheckpoint.CFrame
    end,
 })
@@ -428,7 +428,7 @@ local Button = TeleportTab:CreateButton({
 local Button = TeleportTab:CreateButton({
    Name = "Polo Platform",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.PoloPlatform.PlatformMain.CFrame
    end,
 })
@@ -506,7 +506,7 @@ local Toggle = MobdelTab:CreateToggle({
    Flag = "Tprat", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TpratOn)
 while TpratOn == true do
-   local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+   local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
    rootPart.CFrame = workspace.Rats.SewerRat.HeadParts.Head.CFrame
    wait(0.2)
 end
@@ -519,15 +519,45 @@ local Toggle = MobdelTab:CreateToggle({
    Flag = "Tpcockroach", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TpcockroachOn)
       while TpcockroachOn == true do
-         if game.Workspace.Cockroaches.Cockroach.Enemy.Health == 0 or game.Workspace.Cockroaches.Cockroach.Flying == true then
-             local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
-             rootPart.CFrame = workspace.sleepingRoomTouchPart.CFrame
-         else
-             local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
-             rootPart.CFrame = workspace.Cockroaches.Cockroach.Hitbox.CFrame
-         end
-         wait(0.1)
-     end
+	         local targetRoach = game.Workspace.Cockroaches:FindFirstChild("Cockroach")
+	         local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
+             	if targetRoach.Flying.Value == true then
+    	           rootPart.CFrame = workspace.canelaSleep.CFrame
+                 targetRoach.Flying:GetPropertyChangedSignal("Value"):Connect(function()
+                   if targetRoach.Flying.Value == false then
+                     rootPart.CFrame = targetRoach.Hitbox.CFrame
+                     wait(0.1)
+                     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+                     wait(0.1)
+                     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+                     wait(0.1)
+                     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+	         		wait(0.1)
+	         		rootPart.CFrame = workspace.canelaSleep.CFrame
+		         	end
+		         	end)
+		         	else
+		         		targetRoach.Flying:GetPropertyChangedSignal("Value"):Connect(function()
+                   if targetRoach.Flying.Value == true then
+                     rootPart.CFrame = workspace.canelaSleep.CFrame
+                     targetRoach.Flying:GetPropertyChangedSignal("Value"):Connect(function()
+                       if targetRoach.Flying.Value == false then
+                         rootPart.CFrame = targetRoach.Hitbox.CFrame
+                         wait(0.1)
+                         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+                         wait(0.1)
+                         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+                         wait(0.1)
+                         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BiteEvent"):FireServer()
+		         		wait(0.1)
+		         		rootPart.CFrame = workspace.canelaSleep.CFrame
+             	      end
+         			end)
+         			end
+	         	end)
+         		end
+           wait(0.1)
+           end
      
    end,
 })
@@ -538,7 +568,7 @@ local Toggle = MobdelTab:CreateToggle({
    Flag = "Tphyena", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TphyenaOn)
 while TphyenaOn == true do
-   local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+   local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
    rootPart.CFrame = workspace.HyenaEnemies1.HyenaEnemy.TorsoPart.CFrame
    wait(0.1)
 end
@@ -551,7 +581,7 @@ local Toggle = MobdelTab:CreateToggle({
    Flag = "Tpgreatwhite", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TpgreatwhiteOn)
 while TpgreatwhiteOn == true do
-   local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+   local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
    rootPart.CFrame = workspace.Sharks["Great White"].Tail.CFrame
    wait(0.1)
 end
@@ -564,7 +594,7 @@ local Toggle = MobdelTab:CreateToggle({
    Flag = "Tphammerhead", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TphammerheadOn)
 while TphammerheadOn == true do
-   local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+   local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
    rootPart.CFrame = workspace.Sharks.Hammerhead.Tail.CFrame
    wait(0.1)
 end
@@ -577,7 +607,7 @@ local Toggle = MobdelTab:CreateToggle({
    Flag = "Tpsaw", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(TpsawOn)
 while TpsawOn == true do
-   local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+   local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
    rootPart.CFrame = workspace.Sharks.Saw.Tail.CFrame
    wait(0.1)
 end
@@ -618,7 +648,7 @@ local LobbyteleportSection = LobbyTab:CreateSection("Teleporting")
 local Button = LobbyTab:CreateButton({
    Name = "Truck 1",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.Truck1.Gate.CFrame
    end,
 })
@@ -626,7 +656,7 @@ local Button = LobbyTab:CreateButton({
 local Button = LobbyTab:CreateButton({
    Name = "Truck 2",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.Truck2.Gate.CFrame
    end,
 })
@@ -634,7 +664,7 @@ local Button = LobbyTab:CreateButton({
 local Button = LobbyTab:CreateButton({
    Name = "Daily Reward",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.DailyRewardAssets.Hitbox.CFrame
    end,
 })
@@ -642,7 +672,7 @@ local Button = LobbyTab:CreateButton({
 local Button = LobbyTab:CreateButton({
    Name = "Mystery Shop",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.MysteryShopDoor.Main.CFrame
    end,
 })
@@ -650,7 +680,7 @@ local Button = LobbyTab:CreateButton({
 local Button = LobbyTab:CreateButton({
    Name = "Pet Shop",
    Callback = function()
-      local rootPart = game.Workspace.moikfjwoIANOIW.HumanoidRootPart
+      local rootPart = game.Workspace.sadawefgvesgvwse.HumanoidRootPart
       rootPart.CFrame = workspace.ShopDoor.Main.CFrame
    end,
 })
